@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Trening w domu - zrób to sam!</title>
+    <link rel='stylesheet' href='StyleSheet1.css' type='text/css' />
+</head>
+
+<body onload='document.form1.email.focus()'>
+    <h1>Trening w domu - zrób to sam!</h1>
+    <h2 class="header_2">Zalety treningu w domu</h2>
+    <div class="div_img">
+        <figure>
+            <img class="img_workout_equipment" src=pexels-karolina-grabowska-4397840.jpg alt="workout">
+            <figcaption>Poranny trening pozwala nam się lepiej poczuć!</figcaption>
+        </figure>
+    </div>
+    <p class="workout_text">
+        Z powodu pandemi wielu z nas mocno ograniczyło swoją aktywność fizyczną, a to błąd.<br>
+        Poprzez ograniczenie aktywności wynikające z panujących obostrzeń każdy z nas przytył średnio 2kg.<br>
+        Wraz z przedłużającym się lockdownem nasza aktywność cały czas pozostaje znikoma i następnego lata możemy nie
+        zmieścić się w nasze ulubione ubrania,
+        lecz nie musi tak być!<br>
+        Jednym ze sposobów na zwiększenie naszej aktywności jest trening siłowy wykonywany w domu.<br>
+        Prosty trening potrafi przynieść dla naszego ciała wiele korzyści.<br>
+        Nie dość, że pomoże on nam zrzucić dodatkowe kilogramy, to dzięki aktywności poprawi się nasze samopoczucie, a
+        ból pleców spowodowany ciągłym siedzeniem zniknie.
+    </p>
+    <h4 class="header_4">Plan treningowy</h4>
+    <p class="workout_text">
+        Poniżej prezentujemy plan treningowy, który będzie mógł wykonać każdy z Was w domu!<br>
+        Nie potrzebujecie do tego żadnego sprzętu, wystarczy Wasza motwacja i chęć poczucia się lepiej :)
+    </p>
+    <h3 class="header_3">Wybierz dzień</h3>
+    <table style="width:100%">
+        <tr>
+            <th><a onClick="location.href='Poniedzialek.html'" style="font-size: 20px;">Poniedziałek </a></th>
+            <th><a onClick="location.href='Wtorek.html'" style="font-size: 20px;">Wtorek </a></th>
+            <th><a onClick="location.href='Sroda.html'" style="font-size: 20px;">Środa</a></th>
+            <th><a onClick="location.href='Czwartek.html'" style="font-size: 20px;">Czwartek</a></th>
+            <th><a onClick="location.href='Piatek.html'" style="font-size: 20px;">Piątek </a></th>
+        </tr>
+    </table>
+    <h5 class="header_newsletter">Zapisz się do newslettera</h5>
+    <p class="newsletter">Podaj swój adres e-mail w oknie poniżej:</p>
+    <div class="newsletter">
+        <form name="newsletter">
+            <input type="text" name="email">
+            <button type="submit" onclick="validateEmail(document.newsletter.email)">Prześlij</button>
+        </form>
+        <script src="Script1.js"></script>
+    </div>
+
+    <div class="bmi_calculator_style">
+        <h6 class="header_6">Kalkulator BMI</h6>
+        <P>Aby obliczyć swoje BMI podaj swój wzrost i wagę</P>
+        <form name="Bmi_calculator" class="bmi_calculator_style">
+            Wzrost:
+            <input type="text" name="wzrost1">
+            Waga:
+            <input type="text" name="waga1">
+            <input type="button" value="Oblicz" onclick="calculatebmi()">
+            <p id="message"></p>
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; Wiktor Bejm, Iga Kusmierczyk Soft</p>
+    </footer>
+
+    <p>Dzisiaj jest: <span id="datetime"></span></p>
+
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+    </script>
+</body>
+
+</html>
